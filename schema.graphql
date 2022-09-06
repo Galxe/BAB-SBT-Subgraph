@@ -1,0 +1,13 @@
+enum SBTStatus {
+  Valid
+  Burned
+  Revoked
+}
+
+type SBT @entity {
+  id: ID!
+  status: SBTStatus!
+  owner: Bytes!
+  attestBlock: BigInt!
+  attestTx: Bytes!
+}
